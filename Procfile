@@ -1,2 +1,2 @@
-web: gunicorn mychoice-cbd.wsgi --log-file -
+web: gunicorn polls.wsgi --log-file -
 
