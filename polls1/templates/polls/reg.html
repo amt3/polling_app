@@ -1,0 +1,13 @@
+{% block content %}
+<table>
+	<tr align  = Left>
+		<th width = 100%>{% load static %}<img src = "{% static 'polls/images/Mychoice1.png' %}" style="width:500px;height:80px;"></th>
+		<th><font color = orangered><a href="/polls/{{user_email}}"><h4>Home</h4></a>
+		<th><font color = orangered><a href = "/polls"><h4>Logout</h4></a>
+	</tr>
+</table>
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+
+New User :<a href = "/polls"> Login</a>
+
+{% endblock %}

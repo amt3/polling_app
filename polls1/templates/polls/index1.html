@@ -1,0 +1,23 @@
+{% load static %}
+<table>
+	<tr align  = Left>
+		<th width = 100%>{% load static %}<img src = "{% static 'polls/images/Mychoice1.png' %}" style="width:500px;height:80px;"></th>
+		<th><font color = orangered><a href="/polls/{{user_email}}"><h4>Home</h4></a>
+		<th><font color = orangered><a href = "/polls"><h4>Logout</h4></a>
+	</tr>
+</table>
+
+<font color = Orange> Question Availabel For Polling :</font>
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+<br>
+
+
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <li><a href="{% url 'polls:detail' user_email question.id %}">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}

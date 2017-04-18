@@ -1,0 +1,43 @@
+<table>
+	<tr align  = Left>
+		<th width = 100%>{% load static %}<img src = "{% static 'polls/images/Mychoice1.png' %}" style="width:500px;height:80px;"></th>
+		<th><font color = orangered><a href="/polls/{{user_email}}"><h4>Home</h4></a>
+		<th><font color = orangered><a href = "/polls"><h4>Logout</h4></a>
+	</tr>
+</table>
+		
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+
+<font><h1>{{ question.question_text }}</h1>
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'polls:vote' user_email question.id %}" method="post">
+{% csrf_token %}
+{% for choice in question.choice_set.all %}
+    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
+    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br />
+
+{% endfor %}
+<br>
+<input type="submit" value="Vote" />
+</form>
+
+
+<table style = "width = 100%" cellpadding = "5" cellspacing = "0">
+	<tr bgcolor = "#DCDCDC">
+		<th width = 90% align = left><a href="{% url 'polls:add_comment' user_email question.id %}">Add Comment</a></th>
+		<th></th>
+	<tr>
+
+{% for comment in question.comment_set.all %}
+	<tr bgcolor = "#FFFACD" align = "Left">
+		<th width = 70%>{{comment.comment_user}}</td>
+		<td width = 30%align = right>{{comment.comment_date}}</td>
+	</tr>
+	<tr>
+		<td>{{ comment.comment_text }}<hr></td>
+	</tr>
+{% endfor %}
+</table>	
+
+

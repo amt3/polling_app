@@ -1,0 +1,30 @@
+{% block content %}
+<table>
+	<tr align  = Left>
+		<th width = 100%>{% load static %}<img src = "{% static 'polls/images/Mychoice1.png' %}" style="width:500px;height:80px;"></th>
+		<th><font color = orangered><a href="/polls/{{user_email}}"><h4>Home</h4></a>
+		<th><font color = orangered><a href = "/polls"><h4>Logout</h4></a>
+	</tr>
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+
+
+	<tr align = Left>
+		<td><font size = 2>{% if error_message %}<p><strong style = "color:red">{{ error_message }}</strong></p>{% endif %}</td>
+	</tr>
+	
+	<tr align = left>
+		<td>
+
+			<form method = "POST" action = ".">
+				{% csrf_token %}
+				{{form.as_p}}
+				<input type = "submit"  value = "submit"  class = "btn" >
+			</form>
+		</td>
+	</tr>
+</table>		
+
+
+{% endblock %}
