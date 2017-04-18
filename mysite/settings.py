@@ -15,7 +15,7 @@ from django.conf.urls import include, url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
@@ -26,7 +26,7 @@ SECRET_KEY = '#*()30c0%pplrf)f%w44jb-74a@cjw+4_t1ye9h_*4d917g%se'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*','mychoice-cbd.herokuapp.com']
+ALLOWED_HOSTS = ['*','mychoice-cbd1.herokuapp.com']
 
 
 # Application definition
