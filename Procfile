@@ -1,2 +1,2 @@
-web: gunicorn mysite2.wsgi --log-file -
+web: gunicorn mychoice-cbd.wsgi --log-file -
 
