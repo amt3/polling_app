@@ -25,7 +25,7 @@ SECRET_KEY = '#*()30c0%pplrf)f%w44jb-74a@cjw+4_t1ye9h_*4d917g%se'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mychoice-cbd.herokuapp.com']
+ALLOWED_HOSTS = ['*','mychoice-cbd.herokuapp.com']
 
 
 # Application definition
@@ -78,6 +78,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -89,6 +90,8 @@ DATABASES = {
     }
     
 }
+
+
 
 
 # Password validation
