@@ -80,11 +80,11 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'myproject',
-        'USER': 'myprojectcbd',
-        'PASSWORD': '12345',
-        'HOST': 'localhost',
-        'PORT':'',
+        'NAME': 'd6fhtceb50ufb4',
+        'USER': 'ermpeffeqyggko',
+        'PASSWORD': '0dec1df5c40702652024a30d6c5518c0aba57af542df9cb0703fa9308fa96d7d',
+        'HOST': 'ec2-54-225-118-55.compute-1.amazonaws.com',
+        'PORT':'5432',
     }
     
 }
@@ -128,6 +128,6 @@ USE_TZ = True
 
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-STATIC_ROOT = os.path.join((BASE_DIR), 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
