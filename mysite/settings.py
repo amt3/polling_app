@@ -31,8 +31,7 @@ ALLOWED_HOSTS = ['mychoice-cbd.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
-	'polls',
-#	'polls.apps.PollsConfig',
+	'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
