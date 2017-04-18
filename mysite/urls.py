@@ -22,5 +22,5 @@ PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^polls/', include('polls.urls')),
+    url(r'^polls/', include('/polls.urls')),
 ]
