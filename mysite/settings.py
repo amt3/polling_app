@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+from django.conf.urls import include, url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -31,7 +32,6 @@ ALLOWED_HOSTS = ['*','mychoice-cbd.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
-	'polls',
 #	'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'polls',
 ]
 
 STATIC_URL = '/static/'
